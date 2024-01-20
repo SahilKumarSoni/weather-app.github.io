@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./dist/style.css">
+</head>
+<body class="m-0 p-0 bg-slate-900 text-white font-sans">
+    <div class="flex justify-center items-center mt-[6rem]">
+        <div class="flex justify-center items-center flex-col p-4 w-[21rem] md:w-[25rem] bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl gap-y-8">
+            <div class="flex justify-between items-center w-[19rem]">
+                <input class="searchBox text-black p-3 text-lg rounded-[30px] h-[3rem] w-[247px] outline-none" type="text" name="" id="" placeholder="Enter City name" spellcheck="false">
+                <button class="searchBtn bg-white max-w-[3rem] h-auto rounded-[50%] p-3 flex items-center">
+                    <img class="w-[16px]" src="./dist/images/search.png" alt="">
+                </button>
+            </div>
+            <div class="error font-semibold">Invalid City name</div>
+            <div class="failed-loc font-semibold">Something went wrong</div>
+            <div class="weather flex flex-col gap-y-8">
+                <div class="flex flex-col justify-center items-center gap-y-8">
+                    <img class="weatherIcon max-w-[8rem] w-[8rem]" src="./dist/images/clear.png" alt="">
+                    <div class="temp text-center text-6xl font-bold">22°c</div>
+                    <div class="city text-5xl">Bengaluru</div>
+                </div>
+                <div class="flex justify-between gap-x-8">
+                    <div class="flex items-center gap-x-4">
+                        <img class="w-[2rem]" src="./dist/images/humidity.png" alt="">
+                        <div class="flex flex-col items-start justify-center">
+                            <div class="humidity font-semibold text-xl">53%</div>
+                            <div class="font-semibold text-xl">Humidity</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-x-4">
+                        <img class="w-[2rem]" src="./dist/images/wind.png" alt="">
+                        <div class="flex flex-col items-start justify-center">
+                            <div class="wind font-semibold text-xl">5.66 km\hr</div>
+                            <div class="font-semibold text-xl">Wind Speed</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="userLocation flex justify-between items-center text-center"><img src="./dist/images/location.png.png" class="w-[16px]" alt="">Use my current location</button>
+        </div>
+    </div>
+</body>
+<script type="module" src="./dist/script.js"></script>
+</html>
