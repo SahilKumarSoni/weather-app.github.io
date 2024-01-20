@@ -12,6 +12,8 @@ async function checkWeather(city){
     if(response.status === 404){
         document.querySelector(".error").style.display = "block"
         document.querySelector(".weather").style.display = "none"
+        document.querySelector(".failed-loc").style.display = "none"
+
     } else {
         document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°c";
         document.querySelector(".city").innerHTML = data.name;
@@ -53,6 +55,8 @@ async function getlocation(position){
 }
 
 function failedToGet(){
+    document.querySelector(".error").style.display = "none"
+    document.querySelector(".weather").style.display = "none"
     document.querySelector(".failed-loc").style.display = "block"
 }
 
