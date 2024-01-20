@@ -61,7 +61,7 @@ function failedToGet(){
 }
 
 async function getUserLocationData(lat,long){
-    const response = await fetch(`http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${long}&appid=${apiKey}`)
+    const response = await fetch(`https://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${long}&appid=${apiKey}`)
     return await response.json()
 }
 
